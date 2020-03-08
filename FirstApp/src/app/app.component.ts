@@ -23,7 +23,10 @@ export class AppComponent {
     if(getal < this.randomNumber){window.alert('Hoger')};
     if(getal == this.randomNumber){window.alert('Ge zit er bal op!')};
   }
-  else(window.alert('you lost'));
+  else{
+    window.alert('you lost, starting over...');
+    window.location.reload(); 
+  };
   }
 }
 

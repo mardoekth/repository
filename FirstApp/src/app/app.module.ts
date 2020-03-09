@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //...otherimportstatements...
 import { MaterialModule } from './material.module';
 import {MatInputModule} from '@angular/material/input';
+import {CounterService} from './counter.service';
 
 
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
+import {CounterService} from './counter.service';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class AppComponent {
 
   randomNumber: number = Math.floor(Math.random() * 100) + 1;
   teller: number = 0;
+  secondsLocal: number = 0;
   
 
   gok(getal) {
@@ -27,6 +29,10 @@ export class AppComponent {
     window.alert('you lost, starting over...');
     window.location.reload(); 
   };
+  }
+
+  constructor(counterservice: CounterService){
+    counterservice.seconds.subscribe((seconds)=>{this.secondsLocal = seconds;});
   }
 }
 

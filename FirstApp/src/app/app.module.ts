@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import {MatInputModule} from '@angular/material/input';
 import {CounterService} from './counter.service';
+import {FlexLayoutModule} from '@angular/flex-layout';
+
 
 
 
@@ -20,7 +22,8 @@ import {CounterService} from './counter.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatInputModule
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

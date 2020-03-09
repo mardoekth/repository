@@ -1,15 +1,23 @@
-<h1>Raad het getal!</h1>
-<p>Geef een getal in tussen 0 en 100</p>
-
-<button mat-button (click)="gok(rnd.value)">gok</button>
-
-    <mat-form-field class="example-full-width">
-      <mat-label>Getal tussen 0 en 100</mat-label>
-      <input #rnd matInput placeholder="0" name="getal"
-      (keyup.enter)="gok(rnd.value)">
-    </mat-form-field>
-
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+  <div fxLayout="rowwrap"><div fxFlex="50" fxLayout="column"><!--linker layout --> 
+    <h1>Raad het getal!</h1>
+    <p>Geef een getal in tussen 0 en 100</p>
     
-{{randomNumber}}
-<p>Er resteren {{10-teller}} pogingen</p>
-<p>Je hebt nog {{secondsLocal}} seconden over</p>
+    <button mat-button (click)="gok(rnd.value)">gok</button>
+    
+        <mat-form-field class="example-full-width">
+          <mat-label>Getal tussen 0 en 100</mat-label>
+          <input #rnd matInput placeholder="0" name="getal"
+          (keyup.enter)="gok(rnd.value)">
+        </mat-form-field>
+    
+        
+    {{randomNumber}}
+    <p>Er resteren {{10-teller}} pogingen</p>
+    <p>Je hebt nog {{secondsLocal}} seconden over</p>
+  </div>
+  <div fxFlex="50" fxLayout="column">
+    <!--rechter layout --> </div> 
+  </div>
+
+</div>

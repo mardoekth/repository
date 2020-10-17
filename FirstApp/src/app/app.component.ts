@@ -34,9 +34,7 @@ export class AppComponent {
   };
   }
 
-  constructor(counterservice: CounterService){
-    counterservice.seconds.subscribe((seconds)=>{this.secondsLocal = seconds;});
-  }
+  
 }
 
 

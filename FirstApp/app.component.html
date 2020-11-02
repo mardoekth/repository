@@ -1,0 +1,24 @@
+<div fxFlex fxLayout="column" fxLayoutGap="10px" style="height:100vh">
+  <div fxLayout="row wrap"><div fxFlex="25" fxFlex.lt-md="100" fxLayout="column"><!--linker layout --> 
+    <h1>Raad het getal!</h1>
+    <p>Geef een getal in tussen 0 en 100</p>
+    
+    <button mat-raised-button (click)="gok(rnd.value)" matTooltip="I used the tooltip component, I'am just text but clicking me will make you guess the number!"color="primary">Hover me!</button>
+    <form class="input-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Geef een getal in tussen 0 en 100</mat-label>
+          <input #rnd matInput placeholder="Give in any number between 0 and 100" name="getal" (keyup.enter)="gok(rnd.value)"
+          >
+          
+        </mat-form-field>
+      </form>
+        
+    {{randomNumber}}
+    <p>Er resteren {{10-teller}} pogingen</p>
+    
+  </div>
+  <div fxFlex="50" fxFlex.lt-md="100" fxLayout="column">
+    <!--rechter layout --></div> 
+  </div>
+
+</div>
